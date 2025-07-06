@@ -1,0 +1,266 @@
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        
+        header {
+            background: #6e0414;
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo img {
+            height: 77px;
+            max-width: 100%;
+            border-radius: 15px;
+        }
+        nav {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 0.3rem;
+            white-space: nowrap;
+        }
+        
+        /* Seção Sobre Otimizada para Mobile */
+        .Sobre {
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .Sobre img {
+               margin-top: -40px;  /* Valor negativo sobe a imagem */
+    position: relative; /* Mantém o fluxo do documento */
+    z-index: 1;        /* Garante que fique acima de outros elementos */
+    border: 3px solid #003366; /* Borda opcional para destaque */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra suave */
+}
+        
+        .Sobre-texto {
+            text-align: center;
+        }
+        
+        /* Áreas de Atuação Mobile */
+        .areaAtuacao {
+            padding: 1.5rem;
+        }
+        .areaAtuacao ul {
+            columns: 1;
+            list-style-position: inside;
+            padding: 0 1rem;
+        }
+        .areaAtuacao li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Footer Compacto Mobile */
+        footer {
+         background: #6e0414;
+
+            color: white;
+            padding: 1.5rem 1rem;
+        }
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .footer-section {
+            text-align: center;
+        }
+        .social {
+            margin: 0.5rem 0;
+        }
+        .social a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.3rem;
+        }
+        .copyright {
+            margin-top: 1.5rem;
+            font-size: 0.8rem;
+        }
+        
+        /* Menu Hamburger para Telas Muito Pequenas */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        /* Media Queries para Diferentes Telas */
+        @media (min-width: 576px) {
+            .Sobre {
+                flex-direction: row;
+                text-align: left;
+                gap: 2rem;
+            }
+            .Sobre-texto {
+                text-align: left;
+            }
+            .areaAtuacao ul {
+                columns: 2;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            header {
+                padding: 1rem 2rem;
+                flex-wrap: nowrap;
+            }
+            nav {
+                margin-top: 0;
+            }
+            nav a {
+                font-size: 1rem;
+                padding: 0.5rem;
+            }
+            .footer-content {
+                flex-direction: row;
+                justify-content: space-around;
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+            .footer-section {
+                text-align: left;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            nav {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                text-align: center;
+            }
+            nav.show {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+
+            .areaAtuacao {
+        padding: 2rem;
+        background: #f9f9f9;
+    }
+    
+    .areas-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    .area-card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+    }
+    
+    .area-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .area-card i {
+        color: #E31937;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .area-card h3 {
+        color: #003366;
+        margin-bottom: 1rem;
+    }
+    
+    .area-card li {
+        margin-bottom: 0.5rem;
+        list-style-type: none;
+        position: relative;
+        padding-left: 1.5rem;
+    }
+    
+    .area-card li:before {
+        content: "•";
+        color: #E31937;
+        position: absolute;
+        left: 0;
+    }
+
+       .apresentacao {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    
+    .apresentacao h3 {
+        color: #E31937;
+        margin: 0.5rem 0 1.5rem;
+        font-weight: normal;
+    }
+    
+    .apresentacao ul {
+        margin: 1.5rem 0;
+        padding-left: 1.5rem;
+    }
+    
+    .apresentacao li {
+        margin-bottom: 0.8rem;
+    }
+    
+    .destaques {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .destaque-item {
+        flex: 1;
+        min-width: 200px;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .destaque-item i {
+        color: #003366;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .cta {
+        font-style: italic;
+        border-left: 3px solid #E31937;
+        padding-left: 1rem;
+        margin-top: 2rem;
+    }
+
+    .footer-section p {
+    display: flex;
+    align-items: center;
+    gap: 10px;  /* Espaçamento uniforme entre ícone e texto */
+    margin-bottom: 8px;
+}
